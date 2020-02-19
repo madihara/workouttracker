@@ -1,0 +1,22 @@
+@import '../../index.css';
+
+.container{
+  background-color: var(--accentTeal);
+  border-radius: 50%;
+  position: fixed;
+  bottom: 30px;
+  right: 40px;
+  height: 60px;
+  width: 60px;
+  font-size: 2rem;
+}
+.container:hover{
+  color: red;
+}
+
+.icon{
+  position: relative;
+  text-align: center;
+  vertical-align: center;
+  padding-top: 9px;
+}

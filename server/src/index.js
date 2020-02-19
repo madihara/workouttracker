@@ -1,5 +1,20 @@
 import { GraphQLServer } from 'graphql-yoga'
 
+const users = [{
+  name: 'Madi',
+  id: '1',
+  email: 'madi@madi.com'
+}, {
+  name: 'Andres',
+  id: '2',
+  email: 'madi@madi.com'
+}, {
+  name: 'Jane',
+  id: '3',
+  email: 'madi@madi.com'
+}
+]
+
 const typeDefs = `
   type Query {
     user: User!
@@ -27,14 +42,7 @@ const typeDefs = `
 const resolvers = {
   Query: {
     user() {
-      return {
-        name: 'Madi',
-        id: '12345',
-        email: 'madison@gmail.com',
-        age: 28,
-        weight: 124.3,
-        height: 67,
-      }
+      return users
     },
     exercise() {
       return {

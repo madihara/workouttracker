@@ -9,7 +9,8 @@
 .logoBox{
   padding: 1rem;
   border: 2px solid white;
-  margin: 0.2rem;
+  margin: 0.2rem 0 0 1rem;
+
 }
 
 .date{
@@ -28,4 +29,8 @@
 
 .link:hover{
   color: var(--accentTeal);
+}
+
+.link:last-child {
+  margin-right: 1rem;
 }

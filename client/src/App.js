@@ -1,5 +1,9 @@
 import React from 'react';
 import NavBar from './components/NavBar'
+import WaterTracker from './components/Water/Water'
+import AddButton from './components/AddButton/AddButton'
+import MoodTracker from './components/Mood/MoodTracker'
+import ProteinTracker from './components/Protein/ProteinTracker'
 
 import styles from './app.module.css'
 
@@ -7,10 +11,13 @@ function App() {
   return (
     <div className={styles.container}>
       <NavBar />
-      My workout tracker
-      <div className={styles.box}>color1</div>
-      <div className={styles.box2}>color2</div>
-      <div className={styles.box3}>box3</div>
+      <AddButton />
+      <WaterTracker />
+      <MoodTracker />
+      <ProteinTracker />
+
+
+
     </div>
   );
 }
