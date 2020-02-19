@@ -1,3 +1,12 @@
+:root{
+  --backgroundColor: #121212;
+  --secondaryBG: #202020;
+  --accentPurple: #BB86FC;
+  --accentTeal: #03DAC5;
+  --purpleVarient: #3700B3;
+}
+
+
 html, body{
   padding: 0;
   margin: 0;
@@ -8,7 +17,7 @@ html, body{
 body {
   color: white;
   font-family: sans-serif;
-  background-color: #000000;
+  background-color: var(--backgroundColor);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

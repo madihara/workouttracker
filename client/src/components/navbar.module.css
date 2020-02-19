@@ -1,0 +1,31 @@
+@import '../index.css';
+
+.container{
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
+.logoBox{
+  padding: 1rem;
+  border: 2px solid white;
+  margin: 0.2rem;
+}
+
+.date{
+  display: flex;
+  align-items: center;
+}
+
+.linksBox{
+  display: flex;
+  align-items: center;
+}
+
+.link{
+  padding: 0 0.5rem;
+}
+
+.link:hover{
+  color: var(--accentTeal);
+}

@@ -5,9 +5,13 @@
 }
 
 .box{
-  background-color: #bb86fc;
+  background-color: var(--accentPurple);
 }
 
 .box2{
-  background-color: #5be8ff;
+  background-color: var(--accentTeal);
+}
+
+.box3{
+  background-color: var(--secondaryBG);
 }
