@@ -1,0 +1,13 @@
+@import './index.css';
+
+.container{
+  font-size: 2rem;
+}
+
+.box{
+  background-color: #bb86fc;
+}
+
+.box2{
+  background-color: #5be8ff;
+}

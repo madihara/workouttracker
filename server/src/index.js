@@ -2,14 +2,45 @@ import { GraphQLServer } from 'graphql-yoga'
 
 const typeDefs = `
   type Query {
-    hello: String!
+    user: User!
+    exercise: Exercise!
+  }
+
+  type User {
+    id: ID!
+    name: String!
+    email: String!
+    age: Int
+    weight: Float
+    height: Float
+  }
+
+  type Exercise {
+    name: String!
+    weight: Float
+    duration: Float
+    reps: Int
+    sets: Int
   }
 `
 
 const resolvers = {
   Query: {
-    hello() {
-      return 'Hello, User'
+    user() {
+      return {
+        name: 'Madi',
+        id: '12345',
+        email: 'madison@gmail.com',
+        age: 28,
+        weight: 124.3,
+        height: 67,
+      }
+    },
+    exercise() {
+      return {
+        name: 'jogging',
+        duration: 60
+      }
     }
   }
 }
