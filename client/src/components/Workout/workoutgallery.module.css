@@ -1,0 +1,9 @@
+@import '../../index.css';
+
+.container {
+  padding: 1rem;
+  background-color: var(--secondaryBG);
+  color: white;
+  width: 60%;
+  height: 500px;
+}

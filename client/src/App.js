@@ -4,6 +4,7 @@ import WaterTracker from './components/Water/Water'
 import AddButton from './components/AddButton/AddButton'
 import MoodTracker from './components/Mood/MoodTracker'
 import ProteinTracker from './components/Protein/ProteinTracker'
+import WorkoutGallery from './components/Workout/WorkoutGallery'
 
 import styles from './app.module.css'
 
@@ -15,6 +16,7 @@ function App() {
       <WaterTracker />
       <MoodTracker />
       <ProteinTracker />
+      <WorkoutGallery />
 
 
 

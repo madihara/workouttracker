@@ -1,0 +1,44 @@
+  type Query {
+    users(query: String): [User!]!
+    exercises: [Exercise]
+    water: [Water]
+    me: User
+  }
+
+  type Mutation {
+    createUser(id: ID!, data: CreateUserInput!): User!
+  }
+
+  input CreateUserInput {
+    name: String!
+    email: String!
+    age: Int 
+    weight: Float
+    height: Float
+  }
+
+  type User {
+    id: ID
+    name: String
+    email: String
+    age: Int
+    weight: Float
+    height: Float
+  }
+
+  type Exercise {
+    name: String
+    weight: Float
+    duration: Float
+    reps: Int
+    sets: Int
+  }
+
+  type Water {
+    amount: Float
+  }
+
+  type Weight {
+    current: Float
+    past: [Float]
+  }

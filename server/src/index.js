@@ -1,61 +1,22 @@
 import { GraphQLServer } from 'graphql-yoga'
+import db from './db'
+import Query from '../resolvers/Query'
+import Mutation from '../resolvers/Mutation'
+import User from '../resolvers/User'
 
-const users = [{
-  name: 'Madi',
-  id: '1',
-  email: 'madi@madi.com'
-}, {
-  name: 'Andres',
-  id: '2',
-  email: 'madi@madi.com'
-}, {
-  name: 'Jane',
-  id: '3',
-  email: 'madi@madi.com'
-}
-]
 
-const typeDefs = `
-  type Query {
-    user: User!
-    exercise: Exercise!
-  }
 
-  type User {
-    id: ID!
-    name: String!
-    email: String!
-    age: Int
-    weight: Float
-    height: Float
-  }
-
-  type Exercise {
-    name: String!
-    weight: Float
-    duration: Float
-    reps: Int
-    sets: Int
-  }
-`
-
-const resolvers = {
-  Query: {
-    user() {
-      return users
-    },
-    exercise() {
-      return {
-        name: 'jogging',
-        duration: 60
-      }
-    }
-  }
-}
 
 const server = new GraphQLServer({
-  typeDefs,
-  resolvers
+  typeDefs: './server/src/schema.graphql',
+  resolvers: {
+    Query,
+    Mutation,
+    User
+  },
+  context: {
+    db
+  }
 })
 
 server.start(() => {
