@@ -17,6 +17,18 @@ const Mutation = {
 
     return user
   },
+  deleteUser(parent, args, { db }, info) {
+    const userIndex = db.users.findIndex((user) => user.id === args.id)
+
+    if (!userIndex === -1) {
+      throw new Error('User not found')
+    }
+
+    const deletedUsers = db.users.splice(userIndex, 1)
+
+    return deletedUsers[0]
+
+  },
   createExercise(parent, args, { db }, info) {
 
 
