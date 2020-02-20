@@ -17,6 +17,19 @@ const Mutation = {
 
     return user
   },
+  createExercise(parent, args, { db }, info) {
+
+
+    const exercise = {
+      id: uuid(),
+      ...args.data
+    }
+
+    db.exercises.push(exercise)
+
+    return exercise
+  }
 }
+
 
 export default Mutation

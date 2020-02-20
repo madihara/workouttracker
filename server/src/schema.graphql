@@ -7,6 +7,7 @@
 
   type Mutation {
     createUser(id: ID!, data: CreateUserInput!): User!
+    createExercise(id: ID!, data: CreateExerciseInput!): Exercise!
   }
 
   input CreateUserInput {
@@ -17,17 +18,26 @@
     height: Float
   }
 
+  input CreateExerciseInput {
+    name: String!
+    duration: Float
+    weight: Float
+    reps: Int 
+    sets: Int   
+  }
+
   type User {
-    id: ID
-    name: String
-    email: String
+    id: ID!
+    name: String!
+    email: String!
     age: Int
     weight: Float
     height: Float
   }
 
   type Exercise {
-    name: String
+    name: String!
+    id: ID!
     weight: Float
     duration: Float
     reps: Int

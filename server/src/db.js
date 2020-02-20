@@ -14,14 +14,20 @@ const users = [
   }
 ]
 
-const exercise = [{
+const exercises = [{
   name: 'jogging',
   duration: 50
-}]
+}, {
+  name: 'deadlift',
+  reps: 8,
+  sets: 3
+}
+]
+
 
 const db = {
   users,
-  exercise
+  exercises
 }
 
 export default db
